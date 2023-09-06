@@ -1,0 +1,72 @@
+/* Arsenal Football Club Color Scheme */
+body {
+    background-color: #FFF;
+    /* White background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #EF3340;
+    /* Arsenal Red */
+    color: #FFF;
+    /* White text */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Menu Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    /* Black text */
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+h1,
+h2 {
+    color: #EF3340;
+    /* Arsenal Red */
+}
+
+/* Buttons */
+.cta-button {
+    background-color: #EF3340;
+    /* Arsenal Red */
+    color: #FFF;
+    /* White text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #B31B23;
+    /* Darker Red */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #EF3340;
+    /* Arsenal Red */
+    color: #FFF;
+    /* White text */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Add more custom styles as needed */
