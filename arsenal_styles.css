@@ -17,6 +17,18 @@ header {
     text-align: center;
 }
 
+/*Image Style*/
+img[src="./images/TheABC_v2.png"] {
+    height: Auto;
+    max-width: 100%;
+}
+
+
+img[src="./images/ABC Table_September 2023.png"] {
+    height: Auto;
+    max-width: 50%;
+}
+
 /* Navigation Menu Styles */
 nav ul {
     list-style-type: none;
