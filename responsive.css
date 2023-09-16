@@ -1,0 +1,43 @@
+/* Style for Extra Large Screen */
+@media (max-width:3840px) {
+    iframe {
+        aspect-ratio: 16 / 9;
+        height: 90%;
+        width: 90%;
+    }
+}
+
+/* Style for Large Screen */
+@media (max-width:2560px) {
+    iframe {
+        aspect-ratio: 16 / 9;
+        height: 90%;
+        width: 90%;
+    }
+}
+
+/* Style for Medium Screen */
+@media (max-width:1080px) {
+    iframe {
+        aspect-ratio: 16 / 9;
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@media (max-width:760px) {
+    iframe {
+        aspect-ratio: 16 / 9;
+        height: 90%;
+        width: 90%;
+    }
+}
+
+/* Style for Small Screen */
+@media (max-width:575px) {
+    iframe {
+        aspect-ratio: 9 / 16;
+        height: 90%;
+        width: 90%;
+    }
+}

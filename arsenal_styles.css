@@ -13,19 +13,21 @@ header {
     /* Arsenal Red */
     color: #FFF;
     /* White text */
-    padding: 20px;
+    /* padding: 20px; */
+    padding-top: 50px;
     text-align: center;
 }
 
 /*Image Style*/
 img[src="./images/TheABC_v2.png"] {
     height: Auto;
-    max-width: 100%;
+    max-width: 75%;
 }
 
 img[src="./images/ABC Table_September 2023.png"] {
     height: Auto;
-    max-width: 75%;
+    width: 75%;
+    max-width: 600px;
 }
 
 img[src="./images/DALL·E 2023-08-17 22.34.13 - photorealistic United Kingdom passport for Jim Media, the very British gentleman that looks like a young Harrison Ford dressed for business .png"] {
@@ -36,7 +38,10 @@ img[src="./images/DALL·E 2023-08-17 22.34.13 - photorealistic United Kingdom pa
 /* Navigation Menu Styles */
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 25px;
+    /* aspect-ratio: ; */
+    /* margin-top: 100px; */
+    /* margin-bottom: 100px; */
 }
 
 nav ul li {
@@ -86,3 +91,10 @@ footer {
 }
 
 /* Add more custom styles as needed */
+
+/* iframe styles */
+/* iframe {
+    aspect-ratio: 9 / 16;
+    height: 90%;
+    width: 90%;
+} */
