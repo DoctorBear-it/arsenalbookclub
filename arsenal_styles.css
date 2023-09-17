@@ -98,3 +98,33 @@ footer {
     height: 90%;
     width: 90%;
 } */
+
+
+/* ----------------- Classes ----------------- */
+
+
+/* Headers for page summaries --h2--*/
+.section_title {
+    text-align: center;
+    color: #EF3340;
+    /* Arsenal Red */
+}
+
+/* Headers for sub topics */
+.member_section {
+    margin-left: 1em;
+    margin-right: 0.5em;
+}
+
+.member_name {
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+/* Style of member blurbs --p--*/
+.member_blurb {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 1%;
+
+}
