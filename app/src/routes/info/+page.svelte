@@ -9,9 +9,12 @@
     TableHeadCell,
     ImagePlaceholder,
     Modal
-  } from 'flowbite-svelte';
-  import { slide } from 'svelte/transition';
+    } from 'flowbite-svelte';
 
+    import { slide } from 'svelte/transition';
+
+    import { writable } from 'svelte/store';
+    
     export let data;
 
     //Don't do this, make these calls in +page.ts or +page.server.ts
@@ -57,7 +60,7 @@
         {id:"Code Examples", url:"https://100joursdezbeul.fr/"},
     ];
 
-    const items = [
+    let items = [
         {id:"UI Library", url:"https://madewithsvelte.com/ui-library?page=3"},
         {id:"Shadcn-svelte", url:"https://www.shadcn-svelte.com/"},
         {id:"Spaper", url:"https://oli8.github.io/spaper/?ref=madewithsvelte.com#"},
@@ -71,6 +74,38 @@
         {id:"Skeleton", url:"https://www.skeleton.dev/"},
         {id:"Flowbite Svelte", url:"https://flowbite-svelte.com/"},
     ];
+
+
+    const sortKey = writable('id'); // default sort key
+    const sortDirection = writable(1); // default sort direction (ascending)
+    const sortItems = writable(items.slice()); // make a copy of the items array
+
+    // Define a function to sort the items
+    const sortTable = (key) => {
+        // If the same key is clicked, reverse the sort direction
+        if ($sortKey === key) {
+        sortDirection.update((val) => -val);
+        } else {
+        sortKey.set(key);
+        sortDirection.set(1);
+        }
+    };
+
+    $: {
+        const key = $sortKey;
+        const direction = $sortDirection;
+        const sorted = [...$sortItems].sort((a, b) => {
+        const aVal = a[key];
+        const bVal = b[key];
+        if (aVal < bVal) {
+            return -direction;
+        } else if (aVal > bVal) {
+            return direction;
+        }
+        return 0;
+        });
+        sortItems.set(sorted);
+    }
 
     let openRow;
     let details;
@@ -94,13 +129,13 @@
 
 <Table color="red" hoverable={true}>
     <TableHead>
-        <TableHeadCell>ID</TableHeadCell>
-        <TableHeadCell>URL</TableHeadCell>
+        <TableHeadCell on:click={() => sortTable('id')}>ID</TableHeadCell>
+        <TableHeadCell on:click={() => sortTable('url')}>URL</TableHeadCell>
         <!-- <TableHeadCell>Category</TableHeadCell>
         <TableHeadCell>Price</TableHeadCell> -->
     </TableHead>
     <TableBody tableBodyClass="divide-y">
-        {#each items as item, i}
+        {#each $sortItems as item, i}
             <TableBodyRow on:click={() => toggleRow(i)}>
                 <TableBodyCell>{item.id}</TableBodyCell>
                 <TableBodyCell>{item.url}</TableBodyCell>
