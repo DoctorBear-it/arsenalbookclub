@@ -9,8 +9,26 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"moduleResolution": "bundler"
-	}
+		"moduleResolution": "bundler",
+		// "module": "ES2022",
+		// "moduleResolution": "tsx"
+		// "moduleResolution": "Node",
+		// "module": "CommonJS",
+		// "moduleResolution": "node"
+	},
+	// "ts-node": {
+	// 	"esm": true, // «———— enabling ESM for ts-node
+	// },
+	// "include": [
+	// 	"/**/*.ts"
+	// ],
+	// "exclude": [
+	// 	"node_modules"
+	// ],
+	// "ts-node": {
+	// 	"esm": true,
+	// 	"experimentalSpecifierResolution": "node",
+	// },
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	// except $lib which is handled by https://kit.svelte.dev/docs/configuration#files
 	//

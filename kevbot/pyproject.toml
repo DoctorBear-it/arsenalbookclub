@@ -1,0 +1,36 @@
+[project]
+authors = [{name = "DoctorBear-it", email = "DoctorBear-it@users.noreply.github.com"}]
+dependencies = ["llama-index-llms-ollama>=0.3.2,<0.4", "llama-index-embeddings-huggingface>=0.3.1,<0.4", "haystack-ai>=2.6.1,<3", "ollama-haystack>=1.1.0,<2", "gradio>=4.44.1,<5"]
+description = "Add a short description here"
+name = "kevbot"
+requires-python = ">= 3.10"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.project]
+channels = ["conda-forge", "pytorch", "nvidia"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+kevbot = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+transformers = {version="4.43.*", channel = "conda-forge"}
+datasets = {version="*", channel = "conda-forge"}
+evaluate = {version="*", channel = "conda-forge"}
+accelerate ={version="*", channel = "conda-forge"}
+pytorch = {version = "2.*", channel = "pytorch"}
+torchvision = {version = "*", channel = "pytorch"}
+torchaudio = {version = "*", channel = "pytorch"}
+pytorch-cuda = {version = "12.4", channel = "pytorch"}
+numpy = {version="1.*", channel="conda-forge"}
+ipykernel = {version="*", channel="conda-forge"}
+jupyter = {version="*", channel="conda-forge"}
+cython = {version="*", channel="conda-forge"}
+llama-index = ">=0.11.13,<0.12"
+polars = ">=1.8.2,<2"

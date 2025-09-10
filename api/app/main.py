@@ -18,7 +18,9 @@ app.add_middleware(
 
 @app.get("/")
 async def hello_world():
-    return {"message": "Hello, world!"}
+    return {
+        "message": "The Andrew-bot recommends reading every book. They're all 3/5 cannons."
+    }
 
 
 # TODO: Check out SQLAlchemy 2 ORM

@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
+	import { DarkMode } from 'flowbite-svelte';
 </script>
 
 <header>
@@ -22,6 +23,9 @@
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
+			<li aria-current={$page.url.pathname === '/table' ? 'page' : undefined}>
+				<a href="/table">Table</a>
+			</li>
 			<li aria-current={$page.url.pathname === '/info' ? 'page' : undefined}>
 				<a href="/info">Info</a>
 			</li>
@@ -35,9 +39,10 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<DarkMode class="text-primary-500 dark:text-primary-600 border dark:border-gray-800" />
+		<!-- <a href="https://github.com/sveltejs/kit">
 			<img src={github} alt="GitHub" />
-		</a>
+		</a> -->
 	</div>
 </header>
 

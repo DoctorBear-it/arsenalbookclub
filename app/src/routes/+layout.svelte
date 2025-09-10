@@ -1,17 +1,30 @@
 <script>
 	import Header from './Header.svelte';
+	import Navbar from './Navbar.svelte';
 	import '../app.css';
+	import Counter from './Counter.svelte';
+	import SpeedDial from './SpeedDial.svelte';
+	import Footer from './Footer.svelte';
 </script>
 
 <div class="app">
-	<Header></Header>
+	<Navbar></Navbar>
+	<!-- <Header></Header> -->
 
 	<main>
-		<slot></slot>
+		<div class="mt-20">
+			<slot></slot>
+		</div>
 	</main>
 
+	<SpeedDial />
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<!-- <Counter />
+		<p class="text-center">
+			Click the counter if you visited <br /> (we don't know how to program it)
+		</p> -->
+		<Footer />
+		<!-- <p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p> -->
 	</footer>
 </div>
 
@@ -28,7 +41,7 @@
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
-		max-width: 64rem;
+		/* max-width: 64rem; */
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
